@@ -1,0 +1,20 @@
+---
+interface Props {
+    img1: string;
+    name: string;
+    text: string;
+    style: string
+}
+const {img1,name,text,style}= Astro.props;
+---
+
+<div class="bg-pvdmagenta text-plgmagenta p-9 lg:p-6 rounded-lg text-xl mb-4 flex flex-col lg:justify-center" class:list={style}>
+    <div class="flex gap-6 pb-5 items-center">
+        <img class="rounded-full size-12" src={img1} alt="">
+        <ul class="leading-6">
+            <li class="font-semibold">{name}</li>
+            <li class="font-light text-pspink">Verified Buyer</li>
+        </ul>
+    </div>
+    <p class="font-normal text-balance">{text}</p>
+</div>

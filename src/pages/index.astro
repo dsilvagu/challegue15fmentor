@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Part1 from '../components/Part1.astro';
+import Part2 from '../components/Part2.astro';
+import Part3 from '../components/Part3.astro';
+import img1 from '../images/bg-pattern-top-desktop.svg';
+import img2 from '../images/bg-pattern-bottom-desktop.svg';
+import '@fontsource-variable/league-spartan';
+---
+
+<Layout title='FMentor'>
+	<main class="font-league mx-auto max-w-sm grid gap-10 py-20 lg:max-w-7xl lg:grid-col-2 lg:grid-rows-2">
+		<!-- Part 1 -->
+		<div class="lg:row-start-1 lg:col-start-1 lg:max-w-md ">
+			<Part1 />
+		</div>
+		
+		<!-- Part 2 -->
+		<div class="lg:row-start-1 lg:col-start-2  relative lg:flex lg:justify-center lg:items-center ">
+			<Part2 />
+		</div>
+
+		<!-- Part 3 -->
+		<div class="lg:col-span-2 lg:flex gap-10">
+			<Part3 />
+		</div>
+
+		<img class="hidden lg:block absolute top-0 left-0" src={img1.src} alt="">
+		<img class="hidden lg:block absolute bottom-0 right-0" src={img2.src} alt="">
+		
+	</main>
+</Layout>

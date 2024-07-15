@@ -1,0 +1,20 @@
+---
+interface Props {
+    text: string;
+    style: string
+}
+
+const {text, style} = Astro.props;
+import img1 from '../images/icon-star.svg';
+---
+
+<div class="bg-plgmagenta rounded-lg items-center flex flex-col py-3 gap-2 lg:flex-row lg:justify-center lg:gap-5 " class:list={style}>
+    <div class="flex gap-2 ">
+        <img src={img1.src} alt="">
+        <img src={img1.src} alt="">
+        <img src={img1.src} alt="">
+        <img src={img1.src} alt="">
+        <img src={img1.src} alt="">
+    </div>
+    <p class="text-pvdmagenta font-bold text-lg">{text}</p>
+</div>
